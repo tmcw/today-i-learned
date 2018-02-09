@@ -20,3 +20,22 @@ Let's say you have a monospace-formatted table, so all the `|` should align. If 
 | h |
 | ⚰️ |
 ```
+
+### git is case sensitive, but if you're on a Mac, your file system isn't
+
+`git status` will show a moved file on a case-sensitive system, but not here.
+
+```
+~/tmp/example〉git init .
+Initialized empty Git repository in /Users/tmcw/tmp/example/.git/
+~/tmp/example〉touch Hi
+~/tmp/example〉git add Hi
+~/tmp/example〉git commit -m "First"
+[master (root-commit) c09565f] First
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Hi
+~/tmp/example〉mv Hi hi
+~/tmp/example〉git status
+On branch master
+nothing to commit, working tree clean
+```
