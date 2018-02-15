@@ -39,3 +39,7 @@ Initialized empty Git repository in /Users/tmcw/tmp/example/.git/
 On branch master
 nothing to commit, working tree clean
 ```
+
+### rgba and hsla isn't actually necessary
+
+In CSS Color Module 4, [rgba and hsla](https://drafts.csswg.org/css-color/#rgb-functions) are officially 'legacy' - you can add an alpha component without adding the `a` to either - just use `rgb()` and `hsl()` always.
