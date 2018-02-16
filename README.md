@@ -43,3 +43,7 @@ nothing to commit, working tree clean
 ### rgba and hsla isn't actually necessary
 
 In CSS Color Module 4, [rgba and hsla](https://drafts.csswg.org/css-color/#rgb-functions) are officially 'legacy' - you can add an alpha component without adding the `a` to either - just use `rgb()` and `hsl()` always.
+
+### Browser search is not literal and equates certain characters
+
+If you're in _extreme pedant mode_ and want to find any place where you've typed an errant `'` instead of a curly `’`, and you use Google Chrome's built-in search, you'll be surprised to see that - it matches both, regardless of which character you type. Apparently the search aliases certain common characters, because there are more people who would be upset about some quote-containing search to _not_ return results based on typographical pedantry than people who would want to search for non-curly quotes only.
