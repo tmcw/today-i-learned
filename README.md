@@ -1,6 +1,6 @@
-# gotchas
+# today i learned
 
-Running list of underdocumented pitfalls.
+Running list of little interesting things I learn. Uninteresting things not included. Not guaranteed to be interesting for all / any audiences.
 
 ### Safari 10 and 11 don't _actually_ support let and const
 
