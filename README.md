@@ -47,3 +47,24 @@ In CSS Color Module 4, [rgba and hsla](https://drafts.csswg.org/css-color/#rgb-f
 ### Browser search is not literal and equates certain characters
 
 If you're in _extreme pedant mode_ and want to find any place where you've typed an errant `'` instead of a curly `’`, and you use Google Chrome's built-in search, you'll be surprised to see that - it matches both, regardless of which character you type. Apparently the search aliases certain common characters, because there are more people who would be upset about some quote-containing search to _not_ return results based on typographical pedantry than people who would want to search for non-curly quotes only.
+
+### The default google analytics tracking snippet is sort of wrong
+
+```html
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+```
+
+Spot the weirdness. Well: if you have some script that's sync or that's async but loads _before_ google analytics, and that script changes the page location, then the first page that's tracked is not the page URL that's loaded. We throw in a
+
+```js
+ga("set", "page", location.pathname + location.search);
+```
+
+To make sure the first-page-location-loaded is tracked.
