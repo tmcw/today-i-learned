@@ -68,3 +68,7 @@ ga("set", "page", location.pathname + location.search);
 ```
 
 To make sure the first-page-location-loaded is tracked.
+
+### console.log ain't sync
+
+Okay, I knew this one before, but it's always good to remember: console.log isn't sync. If you console.log something and then immediately modify the thing, console.log is likely to show the modified version, not the version at the time of the `console.log` call. Beware.
