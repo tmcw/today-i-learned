@@ -72,3 +72,17 @@ To make sure the first-page-location-loaded is tracked.
 ### console.log ain't sync
 
 Okay, I knew this one before, but it's always good to remember: console.log isn't sync. If you console.log something and then immediately modify the thing, console.log is likely to show the modified version, not the version at the time of the `console.log` call. Beware.
+
+### smartypants isn't always right
+
+There are some tough cases in English punctuation: see [this issue in the marked repository](https://github.com/markedjs/marked/issues/166):
+
+> I won't do it 'cause I don't want to.
+
+This should have:
+
+* won’t
+* 'cause
+* don’t
+
+The commonplace smartypants option isn't smart enough to parse that, but implementations like [markdown-it](https://github.com/markdown-it/markdown-it) and Medium's online editor can do very advanced quote formatting.
