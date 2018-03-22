@@ -107,3 +107,16 @@ It's just weird, that's all.
 https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-mime-type?
 
 So, like - usually you can fetch anything into anything, but if you're doing something like a Paint Worklet or a WebWorker, and the thing you're fetching has an image or CSV mime type, it's blocked.
+
+### Body 'consume methods' really do consume the thing
+
+https://fetch.spec.whatwg.org/#body-mixin
+
+example
+
+```
+let resp = await fetch('https://unpkg.com/propel@3.2.0?meta');
+[await resp.json(), await resp.text()];
+```
+
+This breaks! What `.json()` and `.text()` do internally is that they consume a _stream_ of the body, and like other streams, you can only consume it once.
