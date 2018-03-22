@@ -86,3 +86,12 @@ This should have:
 * don’t
 
 The commonplace smartypants option isn't smart enough to parse that, but implementations like [markdown-it](https://github.com/markdown-it/markdown-it) and Medium's online editor can do very advanced quote formatting.
+
+### content-type is a weird attack vector
+
+> An attacker could upload a specially crafted JPEG file that contained script content, and then send a link to the file to unsuspecting victims. When the victims visited the server, the malicious file would be downloaded, the script would be detected, and it would run in the context of the picture-sharing site.
+
+[Here's one blog post](https://blogs.msdn.microsoft.com/ie/2008/07/02/ie8-security-part-v-comprehensive-protection/). It's weird, because before even if you declared a content-type, IE would still try to auto-detect a content type, and might re-interpret the file as something different. So you serve a file that contains JavaScript-looking content, but with an `image/jpg` mime-type, IE would treat it as a script. So they:
+
+- stopped sniffing image/ content
+- let you turn sniffing off
