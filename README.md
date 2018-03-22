@@ -101,3 +101,9 @@ The commonplace smartypants option isn't smart enough to parse that, but impleme
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie2
 
 It's just weird, that's all.
+
+### content-type does matter in the case of worker destinations
+
+https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-mime-type?
+
+So, like - usually you can fetch anything into anything, but if you're doing something like a Paint Worklet or a WebWorker, and the thing you're fetching has an image or CSV mime type, it's blocked.
