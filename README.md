@@ -95,3 +95,9 @@ The commonplace smartypants option isn't smart enough to parse that, but impleme
 
 - stopped sniffing image/ content
 - let you turn sniffing off
+
+### along with the set-cookie http header, there's a historical set-cookie2 header
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie2
+
+It's just weird, that's all.
