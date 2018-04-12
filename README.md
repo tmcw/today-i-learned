@@ -120,3 +120,13 @@ let resp = await fetch('https://unpkg.com/propel@3.2.0?meta');
 ```
 
 This breaks! What `.json()` and `.text()` do internally is that they consume a _stream_ of the body, and like other streams, you can only consume it once.
+
+### reassigning the `eval` function to another variable name changes its behavior
+
+In code review, I came across
+
+```js
+const compile = eval;
+```
+
+And wondered why we were renaming it. Almost everywhere in JavaScript, reassigning one variable to another name has no effect. That is [not the case with eval: renaming eval makes it turn into an _indirect_ eval call](http://perfectionkills.com/global-eval-what-are-the-options/#evaling_in_global_scope).
