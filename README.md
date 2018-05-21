@@ -130,3 +130,18 @@ const compile = eval;
 ```
 
 And wondered why we were renaming it. Almost everywhere in JavaScript, reassigning one variable to another name has no effect. That is [not the case with eval: renaming eval makes it turn into an _indirect_ eval call](http://perfectionkills.com/global-eval-what-are-the-options/#evaling_in_global_scope).
+
+### The 'externally resolvable promise trick'
+
+I should have written this one down a while ago, it's something that I learned from Mike's code:
+
+```js
+let resolve;
+
+let myPromise = new Promise(_resolve => { resolve = _resolve });
+
+// now you can resolve that promise remotely
+resolve();
+```
+
+It sort of inverts Promises, in a way, freeing you from relying on the resolve/reject methods only being called from inside its function.
