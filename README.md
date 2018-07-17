@@ -145,3 +145,12 @@ resolve();
 ```
 
 It sort of inverts Promises, in a way, freeing you from relying on the resolve/reject methods only being called from inside its function.
+
+### Equality with NULL in Postgres is not at all what I expected
+
+I spent an hour debugging a simple query and got Jeremy to help and we both were stuck, until I re-read the [Postgres documentation about comparison operators](https://www.postgresql.org/docs/9.1/static/functions-comparison.html): and, here's how it works:
+
+- (7 = NULL) = NULL
+- (7 != NULL) = NULL
+
+NULL, in Postgres, propagates. Any comparison with NULL always yields NULL. I ended up switching to the new `IS DISTINCT FROM` comparison instead of simple `=` comparisons.
