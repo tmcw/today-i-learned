@@ -154,3 +154,13 @@ I spent an hour debugging a simple query and got Jeremy to help and we both were
 - (7 != NULL) = NULL
 
 NULL, in Postgres, propagates. Any comparison with NULL always yields NULL. I ended up switching to the new `IS DISTINCT FROM` comparison instead of simple `=` comparisons.
+
+### Bolded lists should have non-bold commas, italic lists should have italic commas
+
+> _Apples, oranges,_ and _bananas_
+
+Versus
+
+> **Apples**, **oranges**, and **bananas**
+
+(This from Elements of Typographic Style](https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style).
