@@ -163,4 +163,4 @@ Versus
 
 > **Apples**, **oranges**, and **bananas**
 
-(This from Elements of Typographic Style](https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style).
+[This from Elements of Typographic Style](https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style).
