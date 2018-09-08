@@ -164,3 +164,19 @@ Versus
 > **Apples**, **oranges**, and **bananas**
 
 [This from Elements of Typographic Style](https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style).
+
+### Running list of words I encounter in books:
+
+- Death and Life of Great American Cities
+  - Contretemp: minor diagreement
+  - Automat: coin-operated/automated restaurant
+  - Inveigle: to win over with flattery
+- Petrel: a shearwater-like seabird
+- Nekton: a plankton-like sea creature
+- Israel
+  - Kippah: another word for yarmulke
+- Deicide: the killing of a god
+- Amanuensis: a literary or artistic assistant
+- Lachrymose: prone to weeping
+- Sangfroid: composure and coolness
+- Stevedore: a longshoreman or dockworker
