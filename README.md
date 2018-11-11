@@ -180,3 +180,4 @@ Versus
 - Lachrymose: prone to weeping
 - Sangfroid: composure and coolness
 - Stevedore: a longshoreman or dockworker
+- Hillock: a small hill or mound
