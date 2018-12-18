@@ -165,6 +165,22 @@ Versus
 
 [This from Elements of Typographic Style](https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style).
 
+### My default 'alphanumeric' regular expression is deficient
+
+I often write
+
+```js
+/A-Za-z/
+```
+
+But if I want to really cover all the bases, I should write
+
+```js
+/A-ZÀ-ÿa-z/
+```
+
+Otherwise accented words break the regex.
+
 ### Running list of words I encounter in books:
 
 - Death and Life of Great American Cities
