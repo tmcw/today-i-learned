@@ -197,3 +197,7 @@ Otherwise accented words break the regex.
 - Sangfroid: composure and coolness
 - Stevedore: a longshoreman or dockworker
 - Hillock: a small hill or mound
+- Cynosure: a center of attention
+- Janissary: a devoted follower
+- Ex parte: one-sided, from one side
+- Soupcon: a small portion
