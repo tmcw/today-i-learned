@@ -197,6 +197,16 @@ The order of `something` is **not** necessarily preserved. It uses the CTE as an
 ROW_NUMBER () OVER (${orderClause}) AS rn
 ```
 
+### Postgres allows duplicate columns
+
+Like
+
+```sql
+SELECT 1 as a, 2, as a;
+```
+
+This gets tricky because most postgres bindings exposed row objects as objects, so the value is just the last duplicate-named column.
+
 ### Running list of words I encounter in books:
 
 - Death and Life of Great American Cities
