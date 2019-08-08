@@ -181,6 +181,22 @@ But if I want to really cover all the bases, I should write
 
 Otherwise accented words break the regex.
 
+### Postgresql does not respect the order of results in a CTE
+
+If you have a CTE in Postgresql:
+
+```sql
+WITH something AS (SELECT …)
+
+SELECT * from something
+```
+
+The order of `something` is **not** necessarily preserved. It uses the CTE as an optimization but you cannot depend on it. Instead, you’ll need to re-sort, or expose an integer that can be sorted, like
+
+```sql
+ROW_NUMBER () OVER (${orderClause}) AS rn
+```
+
 ### Running list of words I encounter in books:
 
 - Death and Life of Great American Cities
