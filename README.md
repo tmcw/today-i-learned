@@ -18,7 +18,7 @@ Let's say you have a monospace-formatted table, so all the `|` should align. If 
 
 ```
 | h |
-| ⚰️ |
+| 🚀 |
 ```
 
 ### git is case sensitive, but if you're on a Mac, your file system isn't
