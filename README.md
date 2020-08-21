@@ -227,3 +227,11 @@ This gets tricky because most postgres bindings exposed row objects as objects, 
 - Janissary: a devoted follower
 - Ex parte: one-sided, from one side
 - Soupcon: a small portion
+
+### `hidden` attribute
+
+There's an HTML attribute called `hidden` that simply hides elements:
+
+```
+<div hidden>This is hidden!</div>
+```
