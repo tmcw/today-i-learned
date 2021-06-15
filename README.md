@@ -235,3 +235,7 @@ There's an HTML attribute called `hidden` that simply hides elements:
 ```
 <div hidden>This is hidden!</div>
 ```
+
+### You can use `vidir` to rename multiple files
+
+It's part of the [moreutils](https://joeyh.name/code/moreutils/) package that you can install with homebrew, and you just run `vidir` in a directory, change the names, and exit your editor and everything is saved.
