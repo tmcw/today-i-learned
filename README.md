@@ -239,3 +239,15 @@ There's an HTML attribute called `hidden` that simply hides elements:
 ### You can use `vidir` to rename multiple files
 
 It's part of the [moreutils](https://joeyh.name/code/moreutils/) package that you can install with homebrew, and you just run `vidir` in a directory, change the names, and exit your editor and everything is saved.
+
+### The spread operator in JavasScript (`...`) is pretty dangerous in lots of scenarios.
+
+For example:
+
+```js
+const x = Array.from({ length: 1000000 }, (_, i) => i)
+const y = [];
+y.push(...x);
+```
+
+This code crashes, because `...x` creates an arguments object that's too big. That triggers `RangeError: Maximum call stack size exceeded` and crashes. Avoid `...` for values of unknown length.
