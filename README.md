@@ -250,4 +250,4 @@ const y = [];
 y.push(...x);
 ```
 
-This code crashes, because `...x` creates an arguments object that's too big. That triggers `RangeError: Maximum call stack size exceeded` and crashes. Avoid `...` for values of unknown length.
+This code crashes, because `...x` creates an arguments object that's too big. That triggers `RangeError: Maximum call stack size exceeded` and crashes. Avoid `...` for values of unknown length. This does notably **only relate to function calls**, like `.push()`. Using spread in an array, like `[...x]` doesn't trigger the same issue.
