@@ -251,3 +251,7 @@ y.push(...x);
 ```
 
 This code crashes, because `...x` creates an arguments object that's too big. That triggers `RangeError: Maximum call stack size exceeded` and crashes. Avoid `...` for values of unknown length. This does notably **only relate to function calls**, like `.push()`. Using spread in an array, like `[...x]` doesn't trigger the same issue.
+
+## Postgres sorts strings _very_ differently than JavaScript
+
+Postgres does proper locale-based sorting, whereas JavaScript just compares characters by default.
