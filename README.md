@@ -255,3 +255,7 @@ This code crashes, because `...x` creates an arguments object that's too big. Th
 ## Postgres sorts strings _very_ differently than JavaScript
 
 Postgres does proper locale-based sorting, whereas JavaScript just compares characters by default.
+
+## Postgres is one-indexed!
+
+Remember this - the one indexed languages that you'll actually encounter - SQL, Lua, R.
