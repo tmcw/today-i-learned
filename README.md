@@ -259,3 +259,7 @@ Postgres does proper locale-based sorting, whereas JavaScript just compares char
 ## Postgres is one-indexed!
 
 Remember this - the one indexed languages that you'll actually encounter - SQL, Lua, R.
+
+## Dynamic imports in Deno are fetched ahead of time
+
+It's not going to work if you try and profile the `import()` call - Deno does static analysis to find dynamic imports before running the script.
