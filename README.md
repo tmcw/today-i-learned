@@ -254,7 +254,7 @@ This code crashes, because `...x` creates an arguments object that's too big. Th
 
 ## Postgres sorts strings _very_ differently than JavaScript
 
-Postgres does proper locale-based sorting, whereas JavaScript just compares characters by default.
+Postgres does proper locale-based sorting, whereas JavaScript just compares characters by default. You can change the intricate behavior of string sorting by specifying a [COLLATE](https://www.postgresql.org/docs/current/collation.html) option.
 
 ## Postgres is one-indexed!
 
