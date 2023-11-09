@@ -263,3 +263,13 @@ Remember this - the one indexed languages that you'll actually encounter - SQL, 
 ## Dynamic imports in Deno are fetched ahead of time
 
 It's not going to work if you try and profile the `import()` call - Deno does static analysis to find dynamic imports before running the script.
+
+## 1fr in CSS grid layouts is kind of a footgun
+
+See [preventing a grid blowout](https://css-tricks.com/preventing-a-grid-blowout/) for details, or this quick fix:
+
+```css
+grid-template-columns: minmax(0, 1fr) 300px;
+```
+
+The thing is, `1fr` I always thought behaved like 100%, but it doesn't - it won't shrink as much as an element with `100%` because the minimum width is `auto`, not 0. The same goes for flex items, which is why I've often found that `min-width: 0` is helpful when flex elements are misbehaving and not shrinking.
