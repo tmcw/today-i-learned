@@ -273,3 +273,7 @@ grid-template-columns: minmax(0, 1fr) 300px;
 ```
 
 The thing is, `1fr` I always thought behaved like 100%, but it doesn't - it won't shrink as much as an element with `100%` because the minimum width is `auto`, not 0. The same goes for flex items, which is why I've often found that `min-width: 0` is helpful when flex elements are misbehaving and not shrinking.
+
+## Node.js timeouts have an .unref() method that controls whether they keep the process alive
+
+I learned this one by [reading mafintosh's code](https://github.com/holepunchto/task-backoff/blob/main/index.js). You can call `timeout.unref()` and Node.js will stay active until the timeout is over, or reverse that with `timeout.ref()`. Here's the [API reference documentation](https://nodejs.org/api/timers.html#timeoutunref). Pretty interesting.
