@@ -277,3 +277,7 @@ The thing is, `1fr` I always thought behaved like 100%, but it doesn't - it won'
 ## Node.js timeouts have an .unref() method that controls whether they keep the process alive
 
 I learned this one by [reading mafintosh's code](https://github.com/holepunchto/task-backoff/blob/main/index.js). You can call `timeout.unref()` and Node.js will stay active until the timeout is over, or reverse that with `timeout.ref()`. Here's the [API reference documentation](https://nodejs.org/api/timers.html#timeoutunref). Pretty interesting.
+
+## `set -e` will not exit a bash script early if the thing that fails is in a `&&` chain
+
+If you have a command like `export PATH="$DENO_INSTALL/bin:$PATH" && deno --version && deno info` and `deno --version` fails, the script will _not_ exit because [of all the exclusions to set -e behavior](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html).
