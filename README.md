@@ -281,3 +281,7 @@ I learned this one by [reading mafintosh's code](https://github.com/holepunchto/
 ## `set -e` will not exit a bash script early if the thing that fails is in a `&&` chain
 
 If you have a command like `export PATH="$DENO_INSTALL/bin:$PATH" && deno --version && deno info` and `deno --version` fails, the script will _not_ exit because [of all the exclusions to set -e behavior](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html).
+
+## The `Etc/UTC` timezone
+
+The [tz database](https://en.wikipedia.org/wiki/Tz_database) requires timezones to have an 'area' and so the UTC timezone gets its own, under Etcetera.
