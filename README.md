@@ -285,3 +285,7 @@ If you have a command like `export PATH="$DENO_INSTALL/bin:$PATH" && deno --vers
 ## The `Etc/UTC` timezone
 
 The [tz database](https://en.wikipedia.org/wiki/Tz_database) requires timezones to have an 'area' and so the UTC timezone gets its own, under Etcetera.
+
+## In Postgres, GIN indexes and ILIKE queries don't automatically work with citext
+
+So if you create a GIN index on a citext (case-insensitive text) column and try to do `ilike '%something%'` it will refuse to use the index.
