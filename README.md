@@ -289,3 +289,11 @@ The [tz database](https://en.wikipedia.org/wiki/Tz_database) requires timezones 
 ## In Postgres, GIN indexes and ILIKE queries don't automatically work with citext
 
 So if you create a GIN index on a citext (case-insensitive text) column and try to do `ilike '%something%'` it will refuse to use the index.
+
+## express sets Content-Type to text/html if you send a string
+
+```
+res.send('Hi');
+```
+
+[Will set `Content-Type: text/html`](https://expressjs.com/en/5x/api/response/#ressend) unless you have explicitly set a different one.
