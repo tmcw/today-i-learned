@@ -40,6 +40,8 @@ On branch master
 nothing to commit, working tree clean
 ```
 
+_Note_: there's a [setting, core.ignoreCase](https://git-scm.com/docs/git-config/2.14.6#Documentation/git-config.txt-coreignoreCase), that determines whether git should employ workarounds to detect case even if your filesystem doesn't have case-sensitivity. Thanks [Spenser](https://github.com/tmcw/today-i-learned/issues/1) for the tip!
+
 ### rgba and hsla isn't actually necessary
 
 In CSS Color Module 4, [rgba and hsla](https://drafts.csswg.org/css-color/#rgb-functions) are officially 'legacy' - you can add an alpha component without adding the `a` to either - just use `rgb()` and `hsl()` always.
